@@ -1,5 +1,13 @@
 package com.example.demo.hello;
 
-public class Sample {
+import org.springframework.data.annotation.Id;
 
+import lombok.Data;
+
+@Data
+public class Sample {
+	
+	@Id
+	private String id;
+	private String str;
 }
