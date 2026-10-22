@@ -1,5 +1,9 @@
 package com.example.demo.hello;
 
-public interface SampleRepository {
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
+@Repository
+public interface SampleRepository extends CrudRepository<Sample, String> {
+	
 }

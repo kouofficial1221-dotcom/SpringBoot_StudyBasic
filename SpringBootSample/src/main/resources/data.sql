@@ -1,2 +1,2 @@
 INSERT INTO sample(id, str)
-VALUES('1', 'Hello')
+VALUES('1', 'Hello');
