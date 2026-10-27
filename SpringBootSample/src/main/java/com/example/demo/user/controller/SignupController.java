@@ -36,7 +36,7 @@ public class SignupController {
 	
 	/** ユーザー登録処理 */
 	@PostMapping("/signup")
-	public String ostSignup() {
+	public String postSignup() {
 		//ログイン画面にリダイレクト
 		return "redirect:/login";
 	}
