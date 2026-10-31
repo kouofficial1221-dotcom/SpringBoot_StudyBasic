@@ -13,6 +13,8 @@ import jakarta.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import com.example.demo.validator.LengthMin;
+
 import lombok.Data;
 
 
@@ -21,6 +23,7 @@ import lombok.Data;
 public class SignupForm {
 	@NotBlank
 	@Email
+	@LengthMin(min = 5)
 	private String userId;
 	
 	@NotEmpty
@@ -29,6 +32,7 @@ public class SignupForm {
 	private String password;
 	
 	@NotBlank
+	@LengthMin(min = 3)
 	private String userName;
 	
 	@DateTimeFormat(pattern = "yyyy/MM/dd")
