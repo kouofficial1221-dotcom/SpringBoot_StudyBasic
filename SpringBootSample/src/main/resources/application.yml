@@ -29,4 +29,4 @@ spring:
 
 # Log Level
     level:
-        '[com.example.demo]': debug
+          '[com.example.demo]': debug
