@@ -2,13 +2,14 @@ INSERT INTO sample(id, str)
 VALUES('1', 'Hello');
 
 /** ユーザーマスタ */
-INSERT INTO m_usere(
+INSERT INTO m_user(
 	user_id
 	,password
 	,user_name
 	,birthday
 	,age
-	,genderdepartment_id
+	,gender
+	,department_id
 	,role
 ) VALUES
 	('system@example.co.jp', 'password', 'システム管理者', '2000-01-01', 24, 1, 1, 'ROLE_ADMIN')
@@ -25,12 +26,21 @@ INSERT INTO m_usere(
 	;
 	
 /** 部署マスタ */
+INSERT INTO m_department(
+	department_id
+	, department_name
+) VALUES 
+	(1, 'システム管理部')
+	,(2, '営業部')
+;
+
+/** 給与テーブル*/
 INSERT INTO t_salary(
 	user_id
 	,year_month
-	,sarary
+	,salary
 ) VALUES
 	('user1@example.co.jp', '2020/11', 280000)	
-	('user1@example.co.jp', '2020/12', 290000)
-	('user1@example.co.jp', '2020/01', 300000)
+	,('user1@example.co.jp', '2020/12', 290000)
+	,('user1@example.co.jp', '2020/01', 300000)
 ;
