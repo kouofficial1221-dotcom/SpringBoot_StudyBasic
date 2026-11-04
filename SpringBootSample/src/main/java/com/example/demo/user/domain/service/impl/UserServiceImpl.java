@@ -1,8 +1,6 @@
 package com.example.demo.user.domain.service.impl;
 
 
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;
-
 import org.springframework.stereotype.Service;
 
 import com.example.demo.user.domain.model.MUser;
@@ -21,8 +19,8 @@ public class UserServiceImpl implements UserService {
 	
 	@Override
 	public void signup(MUser user) {
-		user.setDepartmentId(1);//部署
-		user.setRole("ROLE_GENERAL");//ロール
+		user.setDepartmentId(1); //部署
+		user.setRole("ROLE_GENERAL"); //ロール
 		int count = mapper.insertOne(user);
 		log.info("登録件数={}件", count);
 	}
