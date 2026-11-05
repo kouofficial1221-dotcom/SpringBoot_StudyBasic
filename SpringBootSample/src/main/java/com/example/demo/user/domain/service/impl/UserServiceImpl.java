@@ -1,6 +1,8 @@
 package com.example.demo.user.domain.service.impl;
 
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.example.demo.user.domain.model.MUser;
@@ -23,5 +25,11 @@ public class UserServiceImpl implements UserService {
 		user.setRole("ROLE_GENERAL"); //ロール
 		int count = mapper.insertOne(user);
 		log.info("登録件数={}件", count);
+	}
+	
+	/** ユーザー取得 */
+	@Override
+	public List<MUser> getUsers(){
+		return mapper.findMany();
 	}
 }
