@@ -36,4 +36,14 @@
 		FROM
 			m_user
 	</select>
+	
+	<!-- ユーザー1件検索 -->
+	<select id="findOne" resultMap="user">
+		SELECT
+			*
+		FROM
+			m_user
+		WHERE
+			user_id = #{userId}
+	</select>
 </mapper>
