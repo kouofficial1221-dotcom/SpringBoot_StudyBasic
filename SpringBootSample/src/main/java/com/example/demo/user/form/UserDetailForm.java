@@ -1,5 +1,16 @@
 package com.example.demo.user.form;
 
-public class UserDetailForm {
+import java.util.Date;
 
+import lombok.Data;
+
+@Data
+public class UserDetailForm {
+	private String userId;
+	private String paassword;
+	private String userName;
+	private Date birthday;
+	private Integer age;
+	private Integer gender;
+	
 }
