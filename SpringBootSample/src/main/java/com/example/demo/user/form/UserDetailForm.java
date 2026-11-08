@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 public class UserDetailForm {
 	private String userId;
-	private String paassword;
+	private String password;
 	private String userName;
 	private Date birthday;
 	private Integer age;
