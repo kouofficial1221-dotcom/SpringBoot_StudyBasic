@@ -1,6 +1,5 @@
 package com.example.demo.user.domain.service.impl;
 
-
 import java.util.Optional;
 
 import org.springframework.context.annotation.Primary;
@@ -12,7 +11,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo.user.domain.model.MUser;
 import com.example.demo.user.domain.service.UserService;
-import com.example.demo.user.repository.UserMapper;
 import com.example.demo.user.repository.UserRepository;
 
 import lombok.RequiredArgsConstructor;
@@ -23,11 +21,9 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Primary
 public class UserServiceImpl2 implements UserService {
-	
-	private final UserMapper mapper;
-	
+
 	private final UserRepository repository;
-	
+
 	@Override
 	public void signup(MUser user) {
 		// 既登録チェック
@@ -35,33 +31,34 @@ public class UserServiceImpl2 implements UserService {
 		if (isExists) {
 			throw new DuplicateKeyException("すでに存在するユーザーです");
 		}
-		
+
 		user.setDepartmentId(1); // 部署
 		user.setRole("ROLE_GENERAL"); // ロール
 		repository.save(user);
 	}
-	
+
 	/** ユーザー取得 */
 	@Override
-	public Page<MUser> getUsers(MUser user, Pageable pageable){
+	public Page<MUser> getUsers(MUser user, Pageable pageable) {
 		// ユーザー一覧取得
 		Page<MUser> userList = repository.findAll(pageable);
 		return userList;
 	}
-	
+
 	@Override
 	public MUser getUserOne(String userId) {
 		Optional<MUser> option = repository.findById(userId);
 		MUser user = option.orElse(null);
 		return user;
 	}
-	
+
+	@Transactional
 	@Override
 	public void updateUserOne(String userId, String password, String userName) {
-		int count = mapper.updateOne(userId, password, userName);
+		int count = repository.updateUser(userId, password, userName);
 		log.info("更新件数={}", count);
 	}
-	
+
 	@Transactional
 	@Override
 	public void deleteUserOne(String userId) {
