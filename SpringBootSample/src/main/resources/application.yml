@@ -23,14 +23,25 @@ spring:
     messages:
         basename: messages,ValidationMessages
 
+    # JPA
+    jpa:
+     hibernate:
+      ddl-auto: none
+
 # MyBatis
 mybatis:
     mapper-locations: classpath*:/mapper/h2/*.xml
     type-aliases-package: com.example.demo.*
     configuration:
-     map-underscore-to-camel-case: true
+        map-underscore-to-camel-case: true
 
 # Log Level
 logging:
-    level: 
-     '[com.example.demo]': debug
+    level:
+        "[com.example.demo]": debug
+        # JPAのログ出力
+        '[org.hibernate]':
+          SQL: debug
+          type:
+            '[descriptor.sql.BasicBinder]': trace
+            Enumtype: trace
