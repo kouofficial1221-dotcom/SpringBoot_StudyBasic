@@ -1,5 +1,7 @@
 package com.example.demo.user.controller;
 
+
+
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,10 +15,12 @@ import com.example.demo.user.domain.service.UserService;
 import com.example.demo.user.form.UserDetailForm;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @Controller
 @RequestMapping("/user")
 @RequiredArgsConstructor
+@Slf4j
 public class UserDetailController {
 
 	private final UserService userService;
@@ -51,8 +55,13 @@ public class UserDetailController {
 	/** ユーザー削除処理 */
 	@PostMapping(value = "/detail", params = "delete")
 	public String deleteUser(UserDetailForm form, Model model) {
-		// ユーザーを削除
-		userService.deleteUserOne(form.getUserId());
+		try {
+			// ユーザーを削除
+			userService.deleteUserOne(form.getUserId());
+		} catch(Exception e) {
+			log.error("ユーザー削除でエラー", e);
+		}
+		
 		// ユーザー一覧画面にリダイレクト
 		return "redirect:/user/list";
 	}
