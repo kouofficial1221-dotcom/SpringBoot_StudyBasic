@@ -28,7 +28,7 @@
 	<!-- マッピング定義 -->
 	<resultMap type="com.example.demo.user.domain.model.Salary" id="salary">
 		<id column="user_id" property="userId" />
-		<id column="yaer_month" property="yearMonth" />
+		<id column="year_month" property="yearMonth" />
 		<result column="salary" property="salary" />
 	</resultMap>
 
