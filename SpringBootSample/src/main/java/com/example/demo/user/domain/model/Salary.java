@@ -11,7 +11,6 @@ import lombok.Data;
 @Table(name="t_salary")
 public class Salary {
 	@EmbeddedId
-	private String userId;
-	private String yearMonth;
+	private SalaryKey salaryKey;
 	private Integer salary;
 }
