@@ -20,7 +20,7 @@ public class ErrorLogAspect {
 	public void serviceLayer() {}
 	
 	@Pointcut("bean(*Controller)")
-	public void contollerLayer() {}
+	public void controllerLayer() {}
 	
 	@Pointcut("repositoryLayer() || serviceLayer() || controllerLayer()")
 	public void applicationLayer() {}
