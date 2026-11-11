@@ -1,4 +1,4 @@
-package com.example.demo.config;
+package com.example.demo.user.domain.service.impl;
 
 public class UserDetailsServiceImpl {
 	
