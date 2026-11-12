@@ -7,7 +7,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +14,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import com.example.demo.user.domain.model.LoginUser;
 import com.example.demo.user.domain.model.MUser;
 import com.example.demo.user.domain.service.UserService;
 import com.example.demo.user.form.UserListForm;
@@ -41,8 +41,8 @@ public class UserListController {
 	
 	/** ユーザー一覧画面を表示 */
 	@GetMapping("/list")
-	public String getUserList(Model model, @ModelAttribute UserListForm form, @PageableDefault(page = 0, size = 3) Pageable pageable, @AuthenticationPrincipal UserDetails loginUser) {
-		log.info("ユーザーID={}", loginUser.getUsername());
+	public String getUserList(Model model, @ModelAttribute UserListForm form, @PageableDefault(page = 0, size = 3) Pageable pageable, @AuthenticationPrincipal LoginUser loginUser) {
+		log.info("ユーザーID={}, ユーザー名={}", loginUser.getUsername());
 		// formをMUserクラスに変換
 		MUser user = modelMapper.map(form, MUser.class);
 		// ユーザー一覧取得
