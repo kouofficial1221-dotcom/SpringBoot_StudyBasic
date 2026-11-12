@@ -14,7 +14,7 @@ public class LoginUser extends User {
 	private String displayUserName;
 	
 	/** コンストラクタ */
-	public LoginUser(String username, String password, Collection<? extends GrantedAuthority> authorities, String displayUsesrName) {
+	public LoginUser(String username, String password, Collection<? extends GrantedAuthority> authorities, String displayUserName) {
 		super(username, password, authorities);
 		this.displayUserName = displayUserName;
 	}
