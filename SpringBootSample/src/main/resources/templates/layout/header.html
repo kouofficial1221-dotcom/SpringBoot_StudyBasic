@@ -11,7 +11,7 @@
 			</div>
 			<!-- ログインユーザー -->
 			<div class="pull-right navbar-brand">
-				ID: <span sec:authentication="name">id</span>
+				ID: <span th:text="${#authentication.name}">id</span>
 				, 名前: <span sec:authentication="principal.displayUserName">name</span>
 			</div>
 			<form method="post" th:action="@{/logout}">
