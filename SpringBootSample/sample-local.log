@@ -1,0 +1,50 @@
+2026/11/14 18:51:02 INFO  [restartedMain] - Starting SpringBootSampleApplication using Java 17.0.19 with PID 27620 (C:\Users\exper\git\SpringBoot_StudyBasic\SpringBootSample\target\classes started by exper in C:\Users\exper\git\SpringBoot_StudyBasic\SpringBootSample)
+2026/11/14 18:51:02 DEBUG [restartedMain] - Running with Spring Boot v4.1.1, Spring v7.0.9
+2026/11/14 18:51:02 INFO  [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2026/11/14 18:51:02 INFO  [background-preinit] - HV000001: Hibernate Validator 9.1.3.Final
+2026/11/14 18:51:02 INFO  [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026/11/14 18:51:02 INFO  [restartedMain] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026/11/14 18:51:03 INFO  [restartedMain] - Multiple Spring Data modules found, entering strict repository configuration mode
+2026/11/14 18:51:03 INFO  [restartedMain] - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2026/11/14 18:51:03 INFO  [restartedMain] - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.hello.SampleRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026/11/14 18:51:03 INFO  [restartedMain] - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.user.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026/11/14 18:51:03 INFO  [restartedMain] - Finished Spring Data repository scanning in 22 ms. Found 0 JDBC repository interfaces.
+2026/11/14 18:51:03 INFO  [restartedMain] - Multiple Spring Data modules found, entering strict repository configuration mode
+2026/11/14 18:51:03 INFO  [restartedMain] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026/11/14 18:51:03 INFO  [restartedMain] - Finished Spring Data repository scanning in 27 ms. Found 2 JPA repository interfaces.
+2026/11/14 18:51:04 INFO  [restartedMain] - Tomcat initialized with port 8080 (http)
+2026/11/14 18:51:04 INFO  [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2026/11/14 18:51:04 INFO  [restartedMain] - Starting service [Tomcat]
+2026/11/14 18:51:04 INFO  [restartedMain] - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026/11/14 18:51:04 INFO  [restartedMain] - Root WebApplicationContext: initialization completed in 1483 ms
+2026/11/14 18:51:04 INFO  [restartedMain] - HikariPool-1 - Starting...
+2026/11/14 18:51:04 INFO  [restartedMain] - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026/11/14 18:51:04 INFO  [restartedMain] - HikariPool-1 - Start completed.
+2026/11/14 18:51:04 INFO  [restartedMain] - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026/11/14 18:51:04 INFO  [restartedMain] - HHH000001: Hibernate ORM core version 7.4.5.Final
+2026/11/14 18:51:05 INFO  [restartedMain] - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026/11/14 18:51:05 INFO  [restartedMain] - HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:testdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: TESTDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026/11/14 18:51:06 INFO  [restartedMain] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026/11/14 18:51:06 INFO  [restartedMain] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026/11/14 18:51:06 INFO  [restartedMain] - SampleComponent1 init
+2026/11/14 18:51:06 INFO  [restartedMain] - SampleComponent2 init
+2026/11/14 18:51:06 INFO  [restartedMain] - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026/11/14 18:51:07 WARN  [restartedMain] - Public final method [public final org.apache.ibatis.session.SqlSessionFactory org.mybatis.spring.support.SqlSessionDaoSupport.getSqlSessionFactory()] cannot get proxied via CGLIB, consider removing the final marker or using interface-based JDK proxies.
+2026/11/14 18:51:07 WARN  [restartedMain] - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final, consider using interface-based JDK proxies instead.
+2026/11/14 18:51:07 WARN  [restartedMain] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026/11/14 18:51:07 INFO  [restartedMain] - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026/11/14 18:51:08 INFO  [restartedMain] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026/11/14 18:51:08 INFO  [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2026/11/14 18:51:08 INFO  [restartedMain] - Tomcat started on port 8080 (http) with context path '/'
+2026/11/14 18:51:08 INFO  [restartedMain] - Started SpringBootSampleApplication in 6.203 seconds (process running for 6.877)
