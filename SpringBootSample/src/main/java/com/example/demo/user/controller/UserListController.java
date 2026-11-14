@@ -42,7 +42,7 @@ public class UserListController {
 	/** ユーザー一覧画面を表示 */
 	@GetMapping("/list")
 	public String getUserList(Model model, @ModelAttribute UserListForm form, @PageableDefault(page = 0, size = 3) Pageable pageable, @AuthenticationPrincipal LoginUser loginUser) {
-		log.info("ユーザーID={}, ユーザー名={}", loginUser.getUsername());
+		log.info("ユーザーID={}, ユーザー名={}", loginUser.getUsername(), loginUser.getDisplayUserName());
 		// formをMUserクラスに変換
 		MUser user = modelMapper.map(form, MUser.class);
 		// ユーザー一覧取得
