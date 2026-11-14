@@ -27,12 +27,12 @@
 		<file>${file.path}</file>
 		<!-- ローテーション設定 -->
 		<rollingPolicy
-			class="ch.qos.logback.coore.rolling.TimeBasedRollingPolicy">
+			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<fileNamePattern>${file.path.pattern}</fileNamePattern>
 			<maxHistory>3</maxHistory>
 		</rollingPolicy>
 		<encoder>
-			<patter>${format}</patter>
+			<pattern>${format}</pattern>
 		</encoder>
 	</appender>
 
