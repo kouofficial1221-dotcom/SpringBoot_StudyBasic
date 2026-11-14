@@ -1,0 +1,42 @@
+2026-11-14T16:48:30.734+09:00  INFO 17192 --- [restartedMain] c.e.demo.SpringBootSampleApplication     : Starting SpringBootSampleApplication using Java 17.0.19 with PID 17192 (C:\Users\exper\git\SpringBoot_StudyBasic\SpringBootSample\target\classes started by exper in C:\Users\exper\git\SpringBoot_StudyBasic\SpringBootSample)
+2026-11-14T16:48:30.739+09:00 DEBUG 17192 --- [restartedMain] c.e.demo.SpringBootSampleApplication     : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-11-14T16:48:30.739+09:00  INFO 17192 --- [restartedMain] c.e.demo.SpringBootSampleApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-11-14T16:48:31.023+09:00  INFO 17192 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-14T16:48:31.029+09:00  INFO 17192 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2026-11-14T16:48:31.043+09:00  INFO 17192 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.hello.SampleRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-11-14T16:48:31.045+09:00  INFO 17192 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.user.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-11-14T16:48:31.045+09:00  INFO 17192 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 JDBC repository interfaces.
+2026-11-14T16:48:31.048+09:00  INFO 17192 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-14T16:48:31.048+09:00  INFO 17192 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-14T16:48:31.065+09:00  INFO 17192 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 2 JPA repository interfaces.
+2026-11-14T16:48:31.233+09:00  INFO 17192 --- [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-11-14T16:48:31.234+09:00  INFO 17192 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-14T16:48:31.234+09:00  INFO 17192 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-11-14T16:48:31.264+09:00  INFO 17192 --- [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 522 ms
+2026-11-14T16:48:31.311+09:00  INFO 17192 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-11-14T16:48:31.313+09:00  INFO 17192 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2026-11-14T16:48:31.313+09:00  INFO 17192 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-11-14T16:48:31.343+09:00  INFO 17192 --- [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-14T16:48:31.384+09:00  INFO 17192 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-14T16:48:31.385+09:00  INFO 17192 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:testdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: TESTDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-14T16:48:31.476+09:00  INFO 17192 --- [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-14T16:48:31.478+09:00  INFO 17192 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-14T16:48:31.504+09:00  INFO 17192 --- [restartedMain] com.example.demo.di.SampleComponent1     : SampleComponent1 init
+2026-11-14T16:48:31.505+09:00  INFO 17192 --- [restartedMain] com.example.demo.di.SampleComponent2     : SampleComponent2 init
+2026-11-14T16:48:31.692+09:00  WARN 17192 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-11-14T16:48:31.756+09:00  INFO 17192 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-11-14T16:48:32.018+09:00  INFO 17192 --- [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-11-14T16:48:32.036+09:00  INFO 17192 --- [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-11-14T16:48:32.038+09:00  INFO 17192 --- [restartedMain] c.e.demo.SpringBootSampleApplication     : Started SpringBootSampleApplication in 1.353 seconds (process running for 166.06)
+2026-11-14T16:48:32.040+09:00  INFO 17192 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
