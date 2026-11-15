@@ -6,7 +6,15 @@
 	<property name="format"
 		value="%d{yyyy/MM/dd HH:mm:ss} %-5level [%thread] - %msg%n" />
 	<springProperty name="file.path" source="log.file.path" />
-	<springProperty naem="file.path.pattern" source="log.file.pattern" />
+	<springProperty name="file.path.pattern" source="log.file.pattern" />
+	<springProfile name="local">
+		<property name="log.level" value="DEBUG" />
+		<property name="log.level.hibernate" value="TRACE" />
+	</springProfile>
+	<springProfile name="dev">
+		<property name="log.level" value="INFO" />
+		<property name="log.level.hibernate" value="INFO" />
+	</springProfile>
 
 	<!-- コンソール出力 -->
 	<appender name="STDOUT"
@@ -41,10 +49,10 @@
 	</root>
 
 	<!-- ログ出力レベル設定 -->
-	<logger name="com.example.demo" level="debug" />
-	<logger name="org.hibernate.SQL" level="debug" />
+	<logger name="com.example.demo" level="{log.level}}" />
+	<logger name="org.hibernate.SQL" level="{log.level}}" />
 	<logger name="org.hibernate.type.descriptor.sql.BasicBinder"
-		level="trace" />
-	<logger name="ort.hibernate.type.EnumType" level="trace" />
+		level="{log.level.hibernate}" />
+	<logger name="org.hibernate.type.EnumType" level="{log.level.hibernate}" />
 
 </configuration>
